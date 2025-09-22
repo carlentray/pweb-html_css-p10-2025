@@ -4,7 +4,146 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Komeng — CV Kreatif</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #111, #1a1a1a);
+      color: #eee;
+    }
+    nav {
+      background: #000;
+      padding: .75rem;
+      text-align: center;
+      border-bottom: 2px solid #f77f00;
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color .3s;
+    }
+    nav a:hover {
+      color: #fcbf49;
+    }
+    nav a.active {
+      font-weight: bold;
+      color: #f77f00;
+    }
+    .cv-page {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .cv-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .cv-left {
+      flex: 1 1 280px;
+    }
+    .cv-right {
+      flex: 2 1 650px;
+    }
+    .cv-card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+      border: 1px solid #333;
+    }
+    .profile img {
+      width: 100%;
+      border-radius: 12px;
+      border: 3px solid #f77f00;
+      box-shadow: 0 0 12px rgba(247,127,0,0.6);
+    }
+    .role {
+      font-style: italic;
+      color: #ccc;
+    }
+    .btn.print {
+      display: inline-block;
+      background: #f77f00;
+      color: #fff;
+      padding: .6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background .3s;
+    }
+    .btn.print:hover {
+      background: #ff9500;
+    }
+    .quote {
+      background: #262626;
+      border-left: 5px solid #f77f00;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #fcbf49;
+    }
+    h1, h2, h3, h4 {
+      color: #f77f00;
+      margin-top: 0;
+    }
+    .skills-bar {
+      margin-top: 1rem;
+    }
+    .skill-item {
+      margin-bottom: 1rem;
+    }
+    .skill-label {
+      font-weight: bold;
+      margin-bottom: .25rem;
+      color: #eee;
+    }
+    .bar {
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      background: linear-gradient(90deg, #f77f00, #fcbf49);
+      height: 12px;
+      width: 0;
+      animation: grow 2s forwards;
+    }
+    @keyframes grow {
+      from { width: 0; }
+      to { width: var(--level); }
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(247,127,0,0.4);
+      transition: transform .3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      margin-top: 2rem;
+      padding: 1.2rem;
+      background: #000;
+      color: #eee;
+      text-align: center;
+      border-top: 2px solid #f77f00;
+    }
+    footer a {
+      color: #fcbf49;
+      margin: 0 .5rem;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -20,83 +159,120 @@
         <div class="cv-card profile">
           <img src="asset/IMG/Komeng_DPD_RI.png" alt="Komeng" />
           <h2>Komeng</h2>
-          <p class="role">Pelawak · Aktor · DPD</p>
+          <p class="role">Pelawak · Aktor · Politikus · Presenter</p>
         </div>
 
         <div class="cv-card contact-card">
           <h3>Kontak</h3>
-          <p>Email: komeng@gmail.com</p>
-          <p>Telepon: 0812-3456-7890</p>
+          <p>Instagram: <a href="https://instagram.com/komeng.original" target="_blank">@komeng.original</a></p>
+          <p>YouTube: <a href="https://www.youtube.com/@komenginfo" target="_blank">KOMENG Info</a></p>
         </div>
 
         <div class="cv-card skills">
           <h3>Skills</h3>
           <ul>
-            <li>Stand-up Comedy</li>
-            <li>Bikin Jatuh Cinta</li>
-            <li>SKS Deadline Praktikum</li>
-            <li>Indomie 3 Bungkus Gas!</li>
+            <li>Komedi Spontan & Sitkom</li>
+            <li>Pembawa Acara TV & Radio</li>
+            <li>Pemeran Film & Sinetron</li>
+            <li>Kreator Konten Digital</li>
+            <li>Public Speaking</li>
           </ul>
         </div>
       </aside>
 
-      <!-- Kolom Kanan -->
       <section class="cv-right">
         <header class="cv-header">
-          <h1>CV Kreatif — Komeng</h1>
+          <h1>CV Kreatif — Komeng (Alfiansyah Bustami)</h1>
           <a class="btn print" href="#" onclick="window.print(); return false;">Print CV</a>
         </header>
 
         <article class="cv-card summary">
           <h3>Deskripsi Singkat</h3>
           <p>
-            Gw Komeng — pelawak yang suka bercanda, aktor, dan sekarang juga aktif di dunia politik.
-            Pengalaman di panggung, TV, sampai organisasi sosial.
+            Nama asli: <strong>Alfiansyah Bustami</strong>. Lahir di Jakarta, 25 Agustus 1970.  
+            Seorang pelawak, aktor, presenter, dan politikus asal Indonesia yang dikenal dengan gaya humor spontan dan jargon khas seperti “Uhuy”.
           </p>
           <p>
-            Sejak awal karier, gua udah terbiasa tampil di depan banyak orang dengan gaya lawakan spontan.
-            Mulai dari panggung kecil di kampung sampai acara TV nasional, semuanya gua jalani dengan semangat.
+            Karier hiburannya dimulai sejak tahun 1990-an, termasuk sebagai penyiar radio, bergabung dengan grup lawak Diamor, hingga membintangi acara komedi di televisi.
           </p>
           <p>
-            Humor menurut gua bukan sekadar hiburan, tapi cara buat nyampein pesan positif ke masyarakat.
-          </p>
-          <p>
-            Selain dunia hiburan, gua juga aktif dalam kegiatan sosial. Ikut serta dalam berbagai kampanye masyarakat,
-            mendukung kegiatan anak muda, sampai jadi mentor buat komedian-komedian baru.
-          </p>
-          <p>
-            Dalam politik, gua berusaha bawa suara rakyat dengan cara gua sendiri: santai, blak-blakan, tapi tulus.
+            Pada Pemilu 2024, ia terpilih sebagai anggota DPD RI dari Jawa Barat dengan perolehan suara tertinggi se-Indonesia untuk calon senator/DPD.
           </p>
         </article>
 
         <article class="cv-card experience">
-          <h3>Experience</h3>
+          <h3>Pengalaman</h3>
           <div class="exp-item">
-            <h4>Wakil Anggota DPD</h4>
-            <span class="date">2019 — 2024</span>
-            <p>Perwakilan rakyat, aktif dalam acara resmi maupun kegiatan masyarakat.</p>
+            <h4>Anggota DPD RI (Senator)</h4>
+            <span class="date">2024 — 2029</span>
+            <p>Terpilih sebagai anggota Dewan Perwakilan Daerah Republik Indonesia dari Daerah Pemilihan Jawa Barat.</p>
           </div>
           <div class="exp-item">
-            <h4>Pelawak Panggung</h4>
-            <span class="date">2010 — Sekarang</span>
-            <p>Tampil di berbagai event, festival, dan program TV nasional.</p>
+            <h4>Karier di Dunia Hiburan</h4>
+            <span class="date">1989 — Sekarang</span>
+            <p>Penyiar radio, grup lawak Diamor, tampil di berbagai acara komedi TV, sitkom, film, dan panggung hiburan nasional.</p>
           </div>
         </article>
 
         <article class="cv-card education">
-          <h3>Education</h3>
-          <div class="edu-item">
-            <h4>SMA Humor Nasional</h4>
-            <span class="date">2000 — 2003</span>
-          </div>
-          <div class="edu-item">
-            <h4>Institut Teknologi Sepuluh Nopember</h4>
-            <p>S-1 Teknologi Informasi</p>
-            <span class="date">2004 — 2008</span>
-          </div>
+          <h3>Pendidikan</h3>
+          <ul>
+            <li><strong>SDN 02 Pagi, Jakarta Timur</strong> — Tamat</li>
+            <li><strong>SMPN 171, Jakarta Timur</strong> — Tamat</li>
+            <li><strong>Akademi Bank Indonesia</strong> — Tidak selesai</li>
+            <li><strong>Studi Sinematografi</strong> — Tidak selesai</li>
+            <li><strong>STIE Tribuana, Bekasi</strong> — Lulus 2018, Sarjana Ekonomi (S.E.)</li>
+          </ul>
         </article>
+
+        <article class="cv-card personal">
+          <h3>Informasi Pribadi</h3>
+          <p><strong>Nama Asli:</strong> Alfiansyah Bustami</p>
+          <p><strong>Tempat & Tanggal Lahir:</strong> Jakarta, 25 Agustus 1970</p>
+          <p><strong>Agama:</strong> Islam</p>
+          <p><strong>Pasangan:</strong> Aprilliana Indra Dewi (menikah 1999)</p>
+          <p><strong>Anak-anak:</strong> Bagus Athallah Aldi, Ganteng Maritza Aldi, (alm.) Cantika Alhayu Aldi</p>
+        </article>
+
+        <section class="cv-card extra">
+          <h3>Motto Hidup</h3>
+          <div class="quote">"Humor bukan sekadar hiburan, tapi cara menyampaikan pesan positif ke masyarakat." — Komeng</div>
+        </section>
+
+        <section class="cv-card skills-bar">
+          <h3>Visualisasi Skill</h3>
+          <div class="skill-item">
+            <div class="skill-label">Komedi Spontan</div>
+            <div class="bar"><div class="bar-fill" style="--level: 95%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Public Speaking</div>
+            <div class="bar"><div class="bar-fill" style="--level: 90%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Aktor / Presenter</div>
+            <div class="bar"><div class="bar-fill" style="--level: 85%;"></div></div>
+          </div>
+        </section>
+
+        <section class="cv-card">
+          <h3>Gallery Acara Populer</h3>
+          <div class="gallery">
+            <img src="asset/IMG/acara1.jpg" alt="Komeng di panggung komedi" />
+            <img src="asset/IMG/acara2.jpg" alt="Komeng di TV show" />
+            <img src="asset/IMG/acara3.jpg" alt="Komeng saat kampanye sosial" />
+          </div>
+        </section>
       </section>
     </section>
   </main>
+
+  <footer>
+    <p>© 2025 CV Kreatif Komeng</p>
+    <p>Ikuti di 
+      <a href="https://instagram.com/komeng.original" target="_blank">Instagram</a> | 
+      <a href="https://www.youtube.com/@komenginfo863" target="_blank">YouTube</a>
+    </p>
+  </footer>
 </body>
 </html>
