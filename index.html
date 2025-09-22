@@ -7,28 +7,75 @@
 </head>
 <body>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
   </nav>
-  
-  <div class="bg-text">Komeng</div>
 
-  <div class="container">
-    <div class="about">
-      <h1>Kenalan dulu dah</h1>
-      <p>
-        Gw komeng
-        Seorang pelawak, DPD, manusia, artis, apa aja deh bisa yang penting jangan disuruh ngehack ITS.
-        Udah dulu ya cape kenalannya
-      </p>
-      <a href="gallery.html" class="btn">CV disini ya</a>
+  <section id="home" class="home-section">
+    <div class="bg-text">Komeng</div>
+    <div class="container">
+      <div class="about">
+        <h1>Kenalan dulu dah</h1>
+        <p>
+          Gw komeng
+          Seorang pelawak, DPD, manusia, artis, apa aja deh bisa yang penting jangan disuruh ngehack ITS.
+          Udah dulu ya cape kenalannya.
+        </p>
+        <a href="CV.html" class="btn">CV disini ya</a>
+      </div>
+
+      <div class="image-container">
+        <img src="asset/IMG/Komeng_DPD_RI.png" alt="Komeng">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-gallery">
+    <div class="about-column">
+      <h2>About Me</h2>
+      <div class="about-card">
+        <p>
+          Nama gw Komeng. Udah lebih dari 20 tahun nyemplung di dunia hiburan Indonesia.
+          Mulai dari pelawak panggung, host acara TV, sampai main film layar lebar.
+          Belakangan juga aktif di dunia organisasi dan politik.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <p>
+          Filosofi hidup gw simpel: bikin orang ketawa, hidup jadi lebih enteng.
+          Jadi kalau lagi stress, inget aja kata Komeng: jangan tegang, ketawa dulu aja.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <p>
+          Selain itu, gw juga suka banget ngopi dan main futsal. Hidup harus seimbang
+          antara kerja keras dan nikmatin hidup. Kadang kalau lagi senggang, gw suka
+          nongkrong bareng temen-temen atau jalan-jalan cari inspirasi buat materi lawakan baru.
+        </p>
+      </div>
     </div>
 
-    <div class="image-container">
-      <img src="asset/IMG/Komeng_DPD_RI.png" alt="Komeng">
+    <div class="gallery-column" id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="asset/IMG/image1.png" alt="Komeng 1" />
+        <img src="asset/IMG/image2.png" alt="Komeng 2" />
+        <img src="asset/IMG/image3.png" alt="Komeng 3" />
+        <img src="asset/IMG/image4.png" alt="Komeng 4" />
+      </div>
     </div>
-  </div>
+  </section>
 </body>
+
+<footer id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:komeng@gmail.com">komeng@gmail.com</a></p>
+  <p>Instagram: <a href="https://instagram.com/komeng.original" target="_blank">@komeng</a></p>
+  <p>Telepon: +62 812-3456-7890</p>
+</footer>
+
 </html>
